@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mineral Resources | JH-Zone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">JH-Zone</div>
+        <nav class="navbar">
+            <a href="../jh.html">Home</a>
+            <a href="../explore_extra/explore.html">Explore</a>
+            <a href="#" class="active">Resources</a>
+            <a href="../Icons/icons.html">Icons</a>
+            <a href="../contact/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Mineral Wealth of Jharkhand</h1>
+        <p>Exploring the "Ruhr of India" — Home to 40% of the country's mineral reserves.</p>
+    </section>
+
+    <main class="container">
+        <div id="resourceGrid" class="grid">
+            </div>
+    </main>
+
+    <div id="resourceModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-body">
+                <div class="gallery-section">
+                    <img id="mainImg" src="" alt="Main Resource Image">
+                    <div class="thumbnails" id="thumbGrid"></div>
+                </div>
+
+                <div class="info-section">
+                    <h2 id="modalTitle">Resource Name</h2>
+                    <div class="stat-box">
+                        <span class="label">Contribution</span>
+                        <span class="value" id="modalContrib">0%</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="label">Key Locations</span>
+                        <span class="value" id="modalLoc">Location</span>
+                    </div>
+                    <p id="modalDesc" class="desc-text">Description goes here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="resources.js"></script>
+</body>
+</html>

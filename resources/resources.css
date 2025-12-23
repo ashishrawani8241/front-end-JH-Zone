@@ -1,0 +1,225 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: #18181b;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ---------- Header (Your Provided Code) ---------- */
+.header {
+    top: 0;
+    width: 100%;
+    height: 60px; /* Increased slightly for better spacing */
+    background: rgba(38, 42, 40, 0.9); /* Increased opacity for readability */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    z-index: 1000;
+    position: sticky;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo { color: #e4f5e9; font-size: 20px; font-weight: 700; }
+
+.navbar a {
+    color: #e4f5e9;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar a:hover, .navbar a.active { color: #4ade80; }
+
+/* ---------- Hero Section ---------- */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #1f2937, #18181b);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #4ade80;
+    margin-bottom: 15px;
+}
+
+.hero p { color: #9ca3af; font-size: 1.1rem; }
+
+/* ---------- Card Grid ---------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #27272a;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #3f3f46;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(74, 222, 128, 0.15);
+    border-color: #4ade80;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content { padding: 20px; }
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.card-content span {
+    font-size: 0.85rem;
+    color: #4ade80;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* ---------- Modal ---------- */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active { opacity: 1; pointer-events: auto; }
+
+.modal-content {
+    background: #27272a;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    overflow: hidden;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #9ca3af;
+    z-index: 10;
+}
+
+.close-btn:hover { color: #fff; }
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-section {
+    flex: 1 1 400px;
+    padding: 20px;
+    background: #18181b;
+}
+
+#mainImg {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #3f3f46;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnails img {
+    width: 70px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.thumbnails img:hover, .thumbnails img.active-thumb {
+    opacity: 1;
+    border: 2px solid #4ade80;
+}
+
+.info-section {
+    flex: 1 1 350px;
+    padding: 40px 30px;
+}
+
+.info-section h2 {
+    font-size: 2.5rem;
+    color: #4ade80;
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #3f3f46;
+    padding-bottom: 10px;
+}
+
+.label {
+    display: block;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+}
+
+.value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.desc-text {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #d1d5db;
+}

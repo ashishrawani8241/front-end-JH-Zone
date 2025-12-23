@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons of Jharkhand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-white scroll-smooth">
+
+    <header class="sticky top-0 z-40 flex items-center justify-between px-10 py-2 bg-zinc-800/90 backdrop-blur-md shadow-lg">
+        <div class="text-2xl font-bold text-emerald-400">Inspiring Icons of Jharkhand</div>
+        <nav class="hidden md:flex space-x-6 text-zinc-300">
+            <a href="../jh.html" class="hover:text-emerald-400 transition">Home</a>
+            <a href="#freedom" class="hover:text-emerald-400 transition">Freedom Fighters</a>
+            <a href="#industry" class="hover:text-emerald-400 transition">Industry</a>
+            <a href="#sports" class="hover:text-emerald-400 transition">Sports</a>
+            <a href="#celebs" class="hover:text-emerald-400 transition">Celebrities</a>
+        </nav>
+    </header>
+
+    <main class="px-6 py-10 max-w-7xl mx-auto space-y-20">
+        
+        <section id="freedom">
+            <h1 class="text-4xl font-bold mb-10 text-center border-b border-emerald-500/30 pb-4">Freedom Fighters</h1>
+            <div id="freedom-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </section>
+
+        <section id="industry">
+            <h1 class="text-4xl font-bold mb-10 text-center border-b border-emerald-500/30 pb-4">Industry & Visionaries</h1>
+            <div id="industry-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </section>
+
+        <section id="sports">
+            <h1 class="text-4xl font-bold mb-10 text-center border-b border-emerald-500/30 pb-4">Sports Icons</h1>
+            <div id="sports-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </section>
+
+        <section id="celebs">
+            <h1 class="text-4xl font-bold mb-10 text-center border-b border-emerald-500/30 pb-4">Celebrities & Arts</h1>
+            <div id="arts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </section>
+
+        <section id="politics">
+            <h1 class="text-4xl font-bold mb-10 text-center border-b border-emerald-500/30 pb-4">Political & Social Leaders</h1>
+            <div id="politics-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </section>
+
+    </main>
+
+    <div id="detailBlock" class="hidden fixed inset-0 bg-black/95 backdrop-blur-md flex items-center justify-center p-6 z-50">
+        <div class="bg-zinc-800 p-8 rounded-3xl max-w-2xl w-full border border-zinc-700 shadow-2xl relative overflow-y-auto max-h-[90vh]">
+            <button onclick="closeDetails()" class="absolute top-4 right-6 text-emerald-400 text-xl font-bold hover:scale-110 transition">✕</button>
+            <div id="modalContent" class="space-y-4">
+                </div>
+            <button onclick="closeDetails()" class="mt-8 w-full py-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl font-bold transition">← Back to Gallery</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

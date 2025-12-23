@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: #f5f7f6;
+}
+
+/* Header */
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 60, 40, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    z-index: 1000;
+}
+
+.logo{
+    color: #e4f5e9;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.navbar a{
+    color: #e4f5e9;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+.navbar a.active,
+.navbar a:hover{
+    color: #9dffb3;
+}
+
+/* Hero */
+.contact-hero{
+    height: 60vh;
+    background: url("https://plus.unsplash.com/premium_photo-1661659423305-215e4602707f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-text{
+    position: relative;
+    color: #fff;
+}
+
+.hero-text h1{
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.hero-text p{
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Contact Section */
+.contact-section{
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-box,
+.contribute-box{
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.contact-box h2,
+.contribute-box h2{
+    color: #003d29;
+    margin-bottom: 10px;
+}
+
+.contact-box p,
+.contribute-box p{
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.contact-box input,
+.contact-box textarea{
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.contact-box button{
+    background: #2ecc71;
+    color: #003d29;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contact-box button:hover{
+    background: #a3ffbf;
+}
+
+/* Contribution */
+.contribute-box ul{
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.contribute-box ul li{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.note{
+    font-size: 14px;
+    color: #777;
+}
+
+/* Footer */
+.footer{
+    height: 50px;
+    background: #003d29;
+    color: #d9fbe5;
+    text-align: center;
+    padding: 10px;
+}
